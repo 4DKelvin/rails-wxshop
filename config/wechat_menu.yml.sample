@@ -1,0 +1,32 @@
+# More option see https://github.com/Eric-Guo/wechat#menu-create
+button:
+ -
+  type: "view"
+  name: "商城首页"
+  url:  "http://dw.jack-kwan.com/"
+ -
+  name: "业务查询"
+  sub_button:
+   -
+    name: "我的订单"
+    url: "http://dw.jack-kwan.com/order.html?group=total"
+    type: "view"
+   -
+    name: "预约说明"
+    url: "https://mp.weixin.qq.com/s/KYi-aakS4HLgsXpDOpiqHw"
+    type: "view"
+   -
+    name: "查询物流"
+    url: "http://kd.dh.cx/eca57"
+    type: "view"
+ -
+  name: "联系我们"
+  sub_button:
+   -
+    name: "在线客服"
+    url: "http://dw.jack-kwan.com/s/dwOd7EkwBQPCwP4cQMKFPw"
+    type: "view"
+   -
+    name: "商务合作"
+    type: "view"
+    url: "http://dw.jack-kwan.com/s/7vFn4opxQxB0box58trmKQ"

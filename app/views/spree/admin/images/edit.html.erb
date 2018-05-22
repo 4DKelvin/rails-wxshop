@@ -1,0 +1,24 @@
+<%= render partial: 'spree/admin/shared/product_tabs', locals: {current: :images} %>
+
+<%= render partial: 'spree/admin/shared/error_messages', locals: {target: @image} %>
+
+<div data-hook="edit_image" class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">
+      <%= @image.attachment_file_name %>
+    </h1>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <%= render partial: 'spree/admin/shared/qiniu', locals: {field_name: Spree.t(:image), target: '#image_attachment', url: @image.attachment.filename} %>
+      <%= form_for [:admin, @product, @image], html: {multipart: true} do |f| %>
+        <%= render partial: 'form', locals: {f: f, k: @image.attachment.filename} %>
+        <div class="form-actions" data-hook="buttons">
+          <%= button Spree.t('actions.update'), 'save' %>
+          <span class="or"><%= Spree.t(:or) %></span>
+          <%= button_link_to Spree.t('actions.cancel'), spree.admin_product_images_url(@product), id: 'cancel_link', icon: 'delete' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

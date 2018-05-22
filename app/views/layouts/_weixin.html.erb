@@ -1,0 +1,18 @@
+<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<%= wechat_config_js debug: false, api: %w(onMenuShareTimeline onMenuShareAppMessage onMenuShareQQ onMenuShareWeibo onMenuShareQZone chooseWXPay getLocation showAllNonBaseMenuItem hideAllNonBaseMenuItem) -%>
+<script type="text/javascript">
+    wx.ready(function () {
+        var share = {
+            link: '',
+            imgUrl: '',
+            title: '',
+            desc: '',
+        };
+        wx.showAllNonBaseMenuItem();
+        wx.onMenuShareTimeline(share);
+        wx.onMenuShareAppMessage(share);
+        wx.onMenuShareQQ(share);
+        wx.onMenuShareWeibo(share);
+        wx.onMenuShareQZone(share);
+    });
+</script>

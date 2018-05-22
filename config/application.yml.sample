@@ -1,0 +1,14 @@
+default: &default
+  qiniu_domain: "http://p6f1fgvu1.bkt.clouddn.com"
+  qiniu_access_key: "BRTceBsgt0S8uwMm-3wTtjkRciJodTyV5OzZorAE"
+  qiniu_secret_key: "nKBiBOoTUMo2-6F-YXgev2_Fg97zoNltbbSKco2n"
+  qiniu_bucket: "diwan"
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+
+test:
+  <<: *default

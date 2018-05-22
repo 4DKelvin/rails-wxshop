@@ -1,0 +1,20 @@
+default: &default
+  appid: "wx70bd818819c71b17"
+  secret: "a8e246338e823946e7b74d79e22f790b"
+  key:  "b5cd69dbd8492cf57500eb61586b0514"
+  mchid: "1247775301"
+  token: "diwan"
+  access_token: "/var/tmp/wechat_access_token"
+  jsapi_ticket: "/var/tmp/wechat_jsapi_ticket"
+  encrypt_mode: false # if true must fill encoding_aes_key
+  encoding_aes_key:  ""
+
+production:
+  <<: *default
+
+development:
+  trusted_domain_fullname: "http://c35a72a0.ngrok.io"
+  <<: *default
+
+test:
+  <<: *default
